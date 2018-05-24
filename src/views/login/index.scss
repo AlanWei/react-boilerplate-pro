@@ -1,0 +1,35 @@
+@import 'styles/helpers';
+
+.view-login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 112px 0 24px 0;
+  &-loginPanel {
+    display: flex;
+    flex-direction: column;
+  }
+  &-appInfo {
+    display: flex;
+    height: 48px;
+  }
+  &-appLogo {
+    height: 100%;
+  }
+  &-appName {
+    font-size: 32px;
+    font-weight: bold;
+  }
+  &-appDesc {
+    margin: 12px 0 40px 0;
+    color: $font-color-secondary;
+    text-align: center;
+  }
+  &-loginInput {
+    height: 40px;
+    margin-bottom: 24px;
+  }
+  &-loginBtn {
+    height: 40px;
+  }
+}

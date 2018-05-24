@@ -1,0 +1,19 @@
+{
+  "sourceMaps": true,
+  "presets": [
+    "env",
+    "react"
+  ],
+  "plugins": [
+    "syntax-dynamic-import",
+    "transform-class-properties",
+    "transform-object-rest-spread",
+    ["module-resolver", {
+      "root": ["./src"]
+    }],
+    ["import", {
+      "libraryName": "antd",
+      "libraryDirectory": "es"
+    }]
+  ]
+}

@@ -1,0 +1,68 @@
+// color palettes
+$grey-1: #ffffff !default;
+$grey-2: #fafafa !default;
+$grey-3: #f5f5f5 !default;
+$grey-4: #e8e8e8 !default;
+$grey-5: #d9d9d9 !default;
+$grey-6: #bfbfbf !default;
+$grey-7: #8c8c8c !default;
+$grey-8: #595959 !default;
+$grey-9: #262626 !default;
+$grey-10: #000000 !default;
+
+$blue-1: #e6f7ff !default;
+$blue-2: #bae7ff !default;
+$blue-3: #91d5ff !default;
+$blue-4: #69c0ff !default;
+$blue-5: #40a9ff !default;
+$blue-6: #1890ff !default;
+$blue-7: #096dd9 !default;
+$blue-8: #0050b3 !default;
+$blue-9: #003a8c !default;
+$blue-10: #002766 !default;
+
+$red-1: #fff1f0 !default;
+$red-2: #ffccc7 !default;
+$red-3: #ffa39e !default;
+$red-4: #ff7875 !default;
+$red-5: #ff4d4f !default;
+$red-6: #f5222d !default;
+$red-7: #cf1322 !default;
+$red-8: #a8071a !default;
+$red-9: #820014 !default;
+$red-10: #5c0011 !default;
+
+$green-1: #f6ffed !default;
+$green-2: #d9f7be !default;
+$green-3: #b7eb8f !default;
+$green-4: #95de64 !default;
+$green-5: #73d13d !default;
+$green-6: #52c41a !default;
+$green-7: #389e0d !default;
+$green-8: #237804 !default;
+$green-9: #135200 !default;
+$green-10: #092b00 !default;
+
+// font
+$font-size-base: 14px !default;
+$font-size-sm: 12px !default;
+$font-size-lg: 16px !default;
+$font-size-xl: 20px !default;
+$font-color-title: rgba(0, 0, 0, .85) !default;
+$font-color-primary: rgba(0, 0, 0, .65) !default;
+$font-color-secondary: rgba(0, 0, 0, .45) !default;
+
+// shadow
+$shadow-color: rgba(0, 0, 0, .15) !default;
+$shadow-1-up: 0 1px 4px $shadow-color !default;
+$shadow-1-down: 0 1px 4px $shadow-color !default;
+$shadow-1-left: -1px 0 4px $shadow-color !default;
+$shadow-1-right: 1px 0 4px $shadow-color !default;
+
+// background
+$layout-body-background: #f0f2f5 !default;
+$layout-sider-header-background: #002140 !default;
+$layout-sider-body-background: #001529 !default;
+
+// border
+$border-radius-base: 4px !default;
