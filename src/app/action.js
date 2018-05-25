@@ -29,8 +29,13 @@ const loginUser = (username, password) => {
   );
 };
 
+const logout = () => ({
+  type: 'APP_LOGOUT',
+});
+
 export default {
   login,
   loginUser,
   resetLoginErrorMsg,
+  logout,
 };

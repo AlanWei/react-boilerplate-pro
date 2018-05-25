@@ -7,20 +7,9 @@ import AclRouter from 'react-acl-router';
 import BasicLayout from 'layouts/BasicLayout';
 import NormalLayout from 'layouts/NormalLayout';
 import { messages, buildConfig } from '../config/buildConfig';
-import menuData from '../config/menu';
 import { authorizedRoutes, unAuthorizedRoutes } from '../config/routes';
 
-const { locale, appName } = buildConfig;
-
-const BasicLayoutWrapper = props => (
-  <BasicLayout
-    {...props}
-    appName={appName}
-    menuData={menuData}
-  >
-    {props.children}
-  </BasicLayout>
-);
+const { locale } = buildConfig;
 
 const propTypes = {
   history: PropTypes.object.isRequired,
@@ -36,7 +25,7 @@ const Router = props => (
       <AclRouter
         authorities={props.user.authorities}
         authorizedRoutes={authorizedRoutes}
-        authorizedLayout={BasicLayoutWrapper}
+        authorizedLayout={BasicLayout}
         normalRoutes={unAuthorizedRoutes}
         normalLayout={NormalLayout}
       />

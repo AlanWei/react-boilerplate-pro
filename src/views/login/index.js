@@ -5,8 +5,6 @@ import { injectIntl } from 'react-intl-context';
 import { connect } from 'react-redux';
 import isEmpty from 'lodash/isEmpty';
 import { Input, Icon, Button } from 'antd';
-import 'antd/lib/input/style';
-import 'antd/lib/icon/style';
 import appAction from 'app/action';
 import { buildConfig } from 'app/config/buildConfig';
 import logo from 'assets/logo.svg';
@@ -78,6 +76,7 @@ class Login extends Component {
           prefix={<Icon type="user" style={{ color: 'rgba(0, 0, 0, .25)' }} />}
           value={username}
           onChange={e => this.onInputChange(e, 'username')}
+          onPressEnter={this.handleLogin}
         />
         <Input
           className={`${prefixCls}-loginInput`}
@@ -86,6 +85,7 @@ class Login extends Component {
           prefix={<Icon type="lock" style={{ color: 'rgba(0, 0, 0, .25)' }} />}
           value={password}
           onChange={e => this.onInputChange(e, 'password')}
+          onPressEnter={this.handleLogin}
         />
         <Button
           className={`${prefixCls}-loginBtn`}

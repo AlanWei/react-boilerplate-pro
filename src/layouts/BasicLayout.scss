@@ -17,16 +17,32 @@
       background: $grey-1;
       box-shadow: $shadow-1-down;
     }
-    .globalFooter {
-      background: $layout-body-background;
-      padding: 0 16px;
-      margin: 48px 0 24px;
-    }
     .globalHeader {
       width: 100%;
       height: 64px;
       background: $grey-1;
       box-shadow: $shadow-1-down;
+      display: flex;
+      justify-content: flex-end;
+      padding-right: 12px;
+      .globalHeader-avatar {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding: 0 12px;
+        &:hover {
+          cursor: pointer;
+          background: $blue-1;
+        }
+      }
+    }
+    .globalFooter {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 16px;
+      margin: 48px 0 24px;
+      color: $font-color-secondary;
     }
   }
 }

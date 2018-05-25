@@ -23,8 +23,15 @@ const resetLoginErrorMsg = state => ({
   loginErrorMsg: '',
 });
 
+const logout = state => ({
+  ...state,
+  isLogin: false,
+  user: {},
+});
+
 export default createReducer(defaultState, {
   APP_LOGIN_SUCCESS: loginSuccess,
   APP_LOGIN_ERROR: loginError,
   APP_RESET_LOGIN_ERROR_MSG: resetLoginErrorMsg,
+  APP_LOGOUT: logout,
 });
