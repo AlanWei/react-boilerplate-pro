@@ -2,5 +2,7 @@
   "login_appDesc": "企业级管理系统 React 应用模版",
   "login_usernameInput_placeholder": "请输入用户名",
   "login_passwordInput_placeholder": "请输入密码",
-  "login_login_btn": "登陆"
+  "login_login_btn": "登陆",
+  "basicLayout_profile": "个人中心",
+  "basicLayout_logout": "退出登陆"
 }
