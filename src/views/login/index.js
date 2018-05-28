@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { push } from 'react-router-redux';
+import { withRouter } from 'react-router-dom';
 import { injectIntl } from 'react-intl-context';
 import { connect } from 'react-redux';
 import isEmpty from 'lodash/isEmpty';
@@ -16,6 +16,7 @@ const propTypes = {
   errorMsg: PropTypes.string.isRequired,
   isLogin: PropTypes.bool.isRequired,
   loginUser: PropTypes.func.isRequired,
+  history: PropTypes.object.isRequired,
 };
 
 const defaultProps = {
@@ -29,13 +30,13 @@ class Login extends Component {
 
   componentDidMount() {
     if (this.props.isLogin) {
-      push('/');
+      this.props.history.push('/');
     }
   }
 
   componentDidUpdate() {
     if (this.props.isLogin) {
-      push('/');
+      this.props.history.push('/');
     }
   }
 
@@ -120,4 +121,7 @@ const mapDispatchToProps = {
 
 Login.propTypes = propTypes;
 Login.defaultProps = defaultProps;
-export default connect(mapStateToProps, mapDispatchToProps)(injectIntl(Login));
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(withRouter(injectIntl(Login)));
