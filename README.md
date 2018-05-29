@@ -5,9 +5,9 @@ Inspired by [Ant Design Pro](https://pro.ant.design/).
 Non-opinionated React Admin System boilerplate integrated with decentralized composable features.
 
 ## Features
-* **Internationalization**: [react-intl-context](https://github.com/AlanWei/react-intl-context)
-* **Access control list**: [react-acl-router](https://github.com/AlanWei/react-acl-router)
-* **Nested menu**: [react-sider](https://github.com/AlanWei/react-sider)
+* :globe_with_meridians: **Internationalization**: [react-intl-context](https://github.com/AlanWei/react-intl-context)
+* :lock: **Access control list**: [react-acl-router](https://github.com/AlanWei/react-acl-router)
+* :memo: **Nested menu**: [react-sider](https://github.com/AlanWei/react-sider)
 
 ## Usage
 ```bash
