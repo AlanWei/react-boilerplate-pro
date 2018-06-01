@@ -7636,9 +7636,9 @@ react-dom@^16.3.2:
     object-assign "^4.1.1"
     prop-types "^15.6.0"
 
-react-intl-context@^0.6.2:
-  version "0.6.2"
-  resolved "https://registry.yarnpkg.com/react-intl-context/-/react-intl-context-0.6.2.tgz#6b04873a52e1d8539c8cb69067c8314106aab3cc"
+react-intl-context@^0.7.0:
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/react-intl-context/-/react-intl-context-0.7.0.tgz#94da9870555127e6ed88b6e4f154a7f538828087"
   dependencies:
     prop-types "^15.6.1"
 

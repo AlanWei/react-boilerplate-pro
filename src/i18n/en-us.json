@@ -1,8 +1,0 @@
-{
-  "login_appDesc": "React App Boilerplate for Enterprise Admin System",
-  "login_usernameInput_placeholder": "Enter your username",
-  "login_passwordInput_placeholder": "Enter your password",
-  "login_login_btn": "Login",
-  "basicLayout_profile": "Profile",
-  "basicLayout_logout": "Logout"
-}

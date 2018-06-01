@@ -17,11 +17,8 @@ const OUTPUT_DIR = path.resolve(__dirname, 'build');
 const CLIENT_DIR = path.join(OUTPUT_DIR, VERSION);
 
 const config = buildConfig[BUILD_DOMAIN];
-
-/* eslint-disable global-require,import/no-dynamic-require */
-const { locale, appName } = config;
-const localeMessages = require(`./src/i18n/${locale}.json`);
-/* eslint-enable global-require,import/no-dynamic-require  */
+const { appName } = config;
+const localeMessages = require('./src/i18n/locale.json');
 
 module.exports = {
   mode: ENV,

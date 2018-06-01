@@ -4,6 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   padding: 112px 0 24px 0;
   &-loginPanel {
     display: flex;
@@ -31,5 +32,17 @@
   }
   &-loginBtn {
     height: 40px;
+  }
+  &-intlSwitch {
+    margin-top: 40px;
+  }
+  &-intlItem {
+    cursor: pointer;
+    &-active {
+      color: $blue-5;
+    }
+  }
+  &-intlSwitchSeparator {
+    margin: 0 12px;
   }
 }

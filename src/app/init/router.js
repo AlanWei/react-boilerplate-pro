@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { ConnectedRouter } from 'react-router-redux';
-import { IntlProvider } from 'react-intl-context';
+import { MultiIntlProvider } from 'react-intl-context';
 import { connect } from 'react-redux';
 import AclRouter from 'react-acl-router';
 import BasicLayout from 'layouts/BasicLayout';
@@ -18,9 +18,9 @@ const propTypes = {
 
 const Router = props => (
   <ConnectedRouter history={props.history}>
-    <IntlProvider
-      locale={locale}
-      messages={messages}
+    <MultiIntlProvider
+      defaultLocale={locale}
+      messageMap={messages}
     >
       <AclRouter
         authorities={props.user.authorities}
@@ -29,7 +29,7 @@ const Router = props => (
         normalRoutes={unAuthorizedRoutes}
         normalLayout={NormalLayout}
       />
-    </IntlProvider>
+    </MultiIntlProvider>
   </ConnectedRouter>
 );
 

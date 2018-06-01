@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import classnames from 'classnames';
 import { withRouter } from 'react-router-dom';
 import { injectIntl } from 'react-intl-context';
 import { connect } from 'react-redux';
@@ -47,6 +48,10 @@ class Login extends Component {
   handleLogin = () => {
     const { username, password } = this.state;
     this.props.loginUser(username, password);
+  }
+
+  updateLocale = (locale) => {
+    this.props.intl.updateLocale(locale);
   }
 
   renderErrorMsg = () => {
@@ -100,11 +105,42 @@ class Login extends Component {
     );
   }
 
+  renderIntlSwitch = () => {
+    const { prefixCls, intl } = this.props;
+
+    return (
+      <div className={`${prefixCls}-intlSwitch`}>
+        <span
+          className={classnames({
+            [`${prefixCls}-intlItem`]: true,
+            [`${prefixCls}-intlItem-active`]: intl.locale === 'en-us',
+          })}
+          onClick={() => this.updateLocale('en-us')}
+          role="presentation"
+        >
+          English
+        </span>
+        <span className={`${prefixCls}-intlSwitchSeparator`}>|</span>
+        <span
+          className={classnames({
+            [`${prefixCls}-intlItem`]: true,
+            [`${prefixCls}-intlItem-active`]: intl.locale === 'zh-cn',
+          })}
+          onClick={() => this.updateLocale('zh-cn')}
+          role="presentation"
+        >
+          中文
+        </span>
+      </div>
+    );
+  }
+
   render() {
     const { prefixCls } = this.props;
     return (
       <div className={prefixCls}>
         {this.renderLoginPanel()}
+        {this.renderIntlSwitch()}
       </div>
     );
   }
