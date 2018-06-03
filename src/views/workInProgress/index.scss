@@ -1,0 +1,25 @@
+.view-workInProgress {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  &-colLayout {
+    display: flex;
+    :nth-child(even) {
+      margin-left: 12px;
+    }
+    :nth-child(odd) {
+      margin-right: 12px;
+    }
+    &-item {
+      flex: 1;
+      min-height: 200px;
+      margin-bottom: 24px;
+    }
+  }
+  &-rowLayout {
+    flex: 1;
+    &-item {
+      height: 100%;
+    }
+  }
+}

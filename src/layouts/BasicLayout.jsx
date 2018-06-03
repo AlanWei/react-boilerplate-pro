@@ -44,6 +44,11 @@ class BasicLayout extends Component {
           <Icon type="user" className={`${prefixCls}-userMenuIcon`} />
           <span>{intl.formatMessage({ id: 'basicLayout_profile' })}</span>
         </Menu.Item>
+        <Menu.Item disabled className={`${prefixCls}-userMenuItem`}>
+          <Icon type="setting" className={`${prefixCls}-userMenuIcon`} />
+          <span>{intl.formatMessage({ id: 'basicLayout_setting' })}</span>
+        </Menu.Item>
+        <Menu.Divider />
         <Menu.Item className={`${prefixCls}-userMenuItem`}>
           <div
             onClick={logout}
