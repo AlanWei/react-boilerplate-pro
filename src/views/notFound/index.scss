@@ -1,0 +1,19 @@
+@import 'styles/helpers';
+
+.view-notFound {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: $layout-body-background;
+  &-errorCode {
+    font-size: $font-size-xl;
+    font-weight: bold;
+    margin-bottom: 24px;
+  }
+  &-errorDesc {
+    font-size: $font-size-lg;
+    margin-bottom: 16px;
+  }
+}

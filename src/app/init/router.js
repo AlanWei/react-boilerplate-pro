@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 import AclRouter from 'react-acl-router';
 import BasicLayout from 'layouts/BasicLayout';
 import NormalLayout from 'layouts/NormalLayout';
+import NotFound from 'views/notFound';
 import { messages, buildConfig } from '../config/buildConfig';
 import { authorizedRoutes, unAuthorizedRoutes } from '../config/routes';
 
@@ -28,6 +29,7 @@ const Router = props => (
         authorizedLayout={BasicLayout}
         normalRoutes={unAuthorizedRoutes}
         normalLayout={NormalLayout}
+        notFound={NotFound}
       />
     </MultiIntlProvider>
   </ConnectedRouter>

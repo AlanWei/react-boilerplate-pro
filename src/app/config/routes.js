@@ -1,42 +1,31 @@
 import Login from 'views/login';
-import workInProgress from 'views/workInProgress';
+import WorkInProgress from 'views/workInProgress';
+import Unauthorized from 'views/unauthorized';
 
 const authorizedRoutes = [{
   path: '/dashboard/analysis/realtime',
   exact: true,
   permissions: ['admin', 'user'],
   redirect: '/login',
-  component: workInProgress,
+  component: WorkInProgress,
 }, {
   path: '/dashboard/analysis/offline',
   exact: true,
   permissions: ['admin', 'user'],
   redirect: '/login',
-  component: workInProgress,
-}, {
-  path: '/dashboard/monitor',
-  exact: true,
-  permissions: ['admin', 'user'],
-  redirect: '/login',
-  component: workInProgress,
+  component: WorkInProgress,
 }, {
   path: '/dashboard/workplace',
   exact: true,
   permissions: ['admin', 'user'],
   redirect: '/login',
-  component: workInProgress,
+  component: WorkInProgress,
 }, {
-  path: '/marketing',
+  path: '/exception/403',
   exact: true,
-  permissions: ['admin', 'user'],
-  redirect: '/login',
-  component: workInProgress,
-}, {
-  path: '/settings/users',
-  exact: true,
-  permissions: ['admin', 'user'],
-  redirect: '/login',
-  component: workInProgress,
+  permissions: ['god'],
+  component: WorkInProgress,
+  unauthorized: Unauthorized,
 }];
 
 const unAuthorizedRoutes = [{

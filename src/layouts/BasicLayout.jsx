@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { connect } from 'react-redux';
 import { injectIntl } from 'react-intl-context';
+import map from 'lodash/map';
 import { Avatar, Dropdown, Menu, Icon } from 'antd';
 import Sider from 'react-sider';
 import 'react-sider/lib/index.css';
@@ -30,6 +31,26 @@ const defaultProps = {
 };
 
 class BasicLayout extends Component {
+  constructor(props) {
+    super(props);
+    this.menuData = this.formatMenuData(menuData);
+  }
+
+  formatMenuData = menu => (
+    map(menu, (item) => {
+      const result = {
+        ...item,
+        name: this.props.intl.formatMessage({ id: item.name }),
+      };
+
+      if (item.children) {
+        result.children = this.formatMenuData(item.children);
+      }
+
+      return result;
+    })
+  );
+
   renderHeader = () => {
     const {
       logout,
@@ -98,7 +119,7 @@ class BasicLayout extends Component {
         <Sider
           appName={appName}
           appLogo={logo}
-          menuData={menuData}
+          menuData={this.menuData}
           pathname={location.pathname}
         />
         <div className={`${prefixCls}-content`}>

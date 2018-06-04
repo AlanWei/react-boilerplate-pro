@@ -1,0 +1,18 @@
+@import 'styles/helpers';
+
+.view-unauthorized {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  &-errorCode {
+    font-size: $font-size-xl;
+    font-weight: bold;
+    margin-bottom: 24px;
+  }
+  &-errorDesc {
+    font-size: $font-size-lg;
+    margin-bottom: 16px;
+  }
+}

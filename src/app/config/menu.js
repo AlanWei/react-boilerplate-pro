@@ -1,37 +1,32 @@
 const menuData = [{
-  name: 'Dashboard',
+  name: 'siderMenu_dashboard',
   icon: 'dashboard',
   path: 'dashboard',
   children: [{
-    name: 'Analysis',
+    name: 'siderMenu_analysis',
     path: 'analysis',
     children: [{
-      name: 'Real-time',
+      name: 'siderMenu_realtime',
       path: 'realtime',
     }, {
-      name: 'Offline',
+      name: 'siderMenu_offline',
       path: 'offline',
     }],
   },
   {
-    name: 'Monitor',
-    path: 'monitor',
-  },
-  {
-    name: 'Workplace',
+    name: 'siderMenu_workplace',
     path: 'workplace',
   }],
 }, {
-  name: 'Marketing',
+  name: 'siderMenu_exception',
   icon: 'table',
-  path: 'marketing',
-}, {
-  name: 'Settings',
-  icon: 'setting',
-  path: 'settings',
+  path: 'exception',
   children: [{
-    name: 'Users Management',
-    path: 'users',
+    name: 'siderMenu_403',
+    path: '403',
+  }, {
+    name: 'siderMenu_404',
+    path: '404',
   }],
 }];
 

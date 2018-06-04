@@ -1,20 +1,42 @@
 {
   "en-us": {
+    "siderMenu_dashboard": "Dashboard",
+    "siderMenu_analysis": "Analysis",
+    "siderMenu_realtime": "Real-time",
+    "siderMenu_offline": "Offline",
+    "siderMenu_workplace": "Workplace",
+    "siderMenu_exception": "Exception",
+    "siderMenu_403": "403 Forbidden",
+    "siderMenu_404": "404 Not Found",
     "login_appDesc": "React App Boilerplate for Enterprise Admin System",
     "login_usernameInput_placeholder": "Enter your username",
     "login_passwordInput_placeholder": "Enter your password",
     "login_login_btn": "Login",
     "basicLayout_profile": "Profile",
     "basicLayout_setting": "Setting",
-    "basicLayout_logout": "Logout"
+    "basicLayout_logout": "Logout",
+    "notFound_404": "Not Found",
+    "unauthorized_403": "Forbidden",
+    "exception_backToHome": "Back To Home"
   },
   "zh-cn": {
+    "siderMenu_dashboard": "仪表盘",
+    "siderMenu_analysis": "分析页",
+    "siderMenu_realtime": "实时数据",
+    "siderMenu_offline": "离线数据",
+    "siderMenu_workplace": "工作台",
+    "siderMenu_exception": "异常页",
+    "siderMenu_403": "403 禁止访问",
+    "siderMenu_404": "404 不存在",
     "login_appDesc": "企业级管理系统 React 应用模版",
     "login_usernameInput_placeholder": "请输入用户名",
     "login_passwordInput_placeholder": "请输入密码",
     "login_login_btn": "登陆",
     "basicLayout_profile": "个人中心",
     "basicLayout_setting": "设置",
-    "basicLayout_logout": "退出登陆"
+    "basicLayout_logout": "退出登陆",
+    "notFound_404": "页面不存在",
+    "unauthorized_403": "无权限查看",
+    "exception_backToHome": "返回首页"
   }
 }
