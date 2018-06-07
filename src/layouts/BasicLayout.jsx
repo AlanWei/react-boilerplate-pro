@@ -11,6 +11,7 @@ import menuData from 'app/config/menu';
 import { buildConfig } from 'app/config/buildConfig';
 import appAction from 'app/action';
 import getFirstChar from 'utils/getFirstChar';
+import LoginChecker from 'hoc/LoginChecker';
 import logo from 'assets/logo.svg';
 import './BasicLayout.scss';
 
@@ -20,6 +21,7 @@ const propTypes = {
   prefixCls: PropTypes.string,
   className: PropTypes.string,
   location: PropTypes.object.isRequired,
+  isLogin: PropTypes.bool.isRequired,
   user: PropTypes.object.isRequired,
   logout: PropTypes.func.isRequired,
   intl: PropTypes.object.isRequired,
@@ -105,6 +107,7 @@ class BasicLayout extends Component {
     const {
       prefixCls,
       className,
+      isLogin,
       location,
       children,
     } = this.props;
@@ -115,26 +118,29 @@ class BasicLayout extends Component {
     });
 
     return (
-      <div className={classes}>
-        <Sider
-          appName={appName}
-          appLogo={logo}
-          menuData={this.menuData}
-          pathname={location.pathname}
-        />
-        <div className={`${prefixCls}-content`}>
-          {this.renderHeader()}
-          <div className={`${prefixCls}-mainContent`}>
-            {children}
+      <LoginChecker isLogin={isLogin}>
+        <div className={classes}>
+          <Sider
+            appName={appName}
+            appLogo={logo}
+            menuData={this.menuData}
+            pathname={location.pathname}
+          />
+          <div className={`${prefixCls}-content`}>
+            {this.renderHeader()}
+            <div className={`${prefixCls}-mainContent`}>
+              {children}
+            </div>
+            {this.renderFooter()}
           </div>
-          {this.renderFooter()}
         </div>
-      </div>
+      </LoginChecker>
     );
   }
 }
 
 const mapStateToProps = state => ({
+  isLogin: state.app.isLogin,
   user: state.app.user,
 });
 

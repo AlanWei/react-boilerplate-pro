@@ -1,4 +1,3 @@
-import { push } from 'react-router-redux';
 import api from 'utils/api';
 import createAsyncAction from 'utils/createAsyncAction';
 
@@ -24,7 +23,7 @@ const loginUser = (username, password) => {
         if (callbackAction.type === 'APP_LOGIN_ERROR') {
           return setTimeout(() => dispatch(resetLoginErrorMsg()), 1500);
         }
-        return dispatch(push('/'));
+        return null;
       }))
   );
 };
