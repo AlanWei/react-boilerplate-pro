@@ -8,7 +8,7 @@ import BasicLayout from 'layouts/BasicLayout';
 import NormalLayout from 'layouts/NormalLayout';
 import NotFound from 'views/notFound';
 import { messages, buildConfig } from '../config/buildConfig';
-import { authorizedRoutes, unAuthorizedRoutes } from '../config/routes';
+import { authorizedRoutes, normalRoutes } from '../config/routes';
 
 const { locale } = buildConfig;
 
@@ -27,7 +27,7 @@ const Router = props => (
         authorities={props.user.authorities}
         authorizedRoutes={authorizedRoutes}
         authorizedLayout={BasicLayout}
-        normalRoutes={unAuthorizedRoutes}
+        normalRoutes={normalRoutes}
         normalLayout={NormalLayout}
         notFound={NotFound}
       />

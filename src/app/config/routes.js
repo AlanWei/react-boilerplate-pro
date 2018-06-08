@@ -28,7 +28,7 @@ const authorizedRoutes = [{
   unauthorized: Unauthorized,
 }];
 
-const unAuthorizedRoutes = [{
+const normalRoutes = [{
   path: '/',
   exact: true,
   redirect: '/dashboard/analysis/realtime',
@@ -40,5 +40,5 @@ const unAuthorizedRoutes = [{
 
 export {
   authorizedRoutes,
-  unAuthorizedRoutes,
+  normalRoutes,
 };
