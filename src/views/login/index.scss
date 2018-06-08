@@ -16,10 +16,13 @@
   }
   &-appLogo {
     height: 100%;
+    padding: 4px;
+    margin-right: 8px;
   }
   &-appName {
     font-size: 32px;
     font-weight: bold;
+    white-space: nowrap;
   }
   &-appDesc {
     margin: 12px 0 40px 0;

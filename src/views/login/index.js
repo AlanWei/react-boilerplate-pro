@@ -7,7 +7,6 @@ import { connect } from 'react-redux';
 import isEmpty from 'lodash/isEmpty';
 import { Input, Icon, Button } from 'antd';
 import appAction from 'app/action';
-import { buildConfig } from 'app/config/buildConfig';
 import logo from 'assets/logo.svg';
 import './index.scss';
 
@@ -69,7 +68,7 @@ class Login extends Component {
       <div className={`${prefixCls}-loginPanel`}>
         <div className={`${prefixCls}-appInfo`}>
           <img className={`${prefixCls}-appLogo`} src={logo} alt="logo" />
-          <span className={`${prefixCls}-appName`}>{buildConfig.appName}</span>
+          <span className={`${prefixCls}-appName`}>{intl.formatMessage({ id: 'appName' })}</span>
         </div>
         <div className={`${prefixCls}-appDesc`}>
           {intl.formatMessage({ id: 'login_appDesc' })}

@@ -1,5 +1,6 @@
 {
   "en-us": {
+    "appName": "React App Pro",
     "siderMenu_dashboard": "Dashboard",
     "siderMenu_analysis": "Analysis",
     "siderMenu_realtime": "Real-time",
@@ -20,6 +21,7 @@
     "exception_backToHome": "Back To Home"
   },
   "zh-cn": {
+    "appName": "React 中后台应用",
     "siderMenu_dashboard": "仪表盘",
     "siderMenu_analysis": "分析页",
     "siderMenu_realtime": "实时数据",

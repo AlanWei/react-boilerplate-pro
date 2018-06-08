@@ -8,14 +8,11 @@ import { Avatar, Dropdown, Menu, Icon } from 'antd';
 import Sider from 'react-sider';
 import 'react-sider/lib/index.css';
 import menuData from 'app/config/menu';
-import { buildConfig } from 'app/config/buildConfig';
 import appAction from 'app/action';
 import getFirstChar from 'utils/getFirstChar';
 import LoginChecker from 'hoc/LoginChecker';
 import logo from 'assets/logo.svg';
 import './BasicLayout.scss';
-
-const { appName } = buildConfig;
 
 const propTypes = {
   prefixCls: PropTypes.string,
@@ -107,6 +104,7 @@ class BasicLayout extends Component {
     const {
       prefixCls,
       className,
+      intl,
       isLogin,
       location,
       children,
@@ -121,7 +119,7 @@ class BasicLayout extends Component {
       <LoginChecker isLogin={isLogin}>
         <div className={classes}>
           <Sider
-            appName={appName}
+            appName={intl.formatMessage({ id: 'appName' })}
             appLogo={logo}
             menuData={this.menuData}
             pathname={location.pathname}
