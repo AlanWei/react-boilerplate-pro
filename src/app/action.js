@@ -3,7 +3,7 @@ import createAsyncAction from 'utils/createAsyncAction';
 
 const login = (username, password) => (
   createAsyncAction('APP_LOGIN', () => (
-    api.post('/api/login', {
+    api.post('/login', {
       username,
       password,
     })

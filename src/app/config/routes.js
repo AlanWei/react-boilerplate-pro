@@ -1,4 +1,5 @@
 import Login from 'views/login';
+import Outlets from 'views/outlets';
 import WorkInProgress from 'views/workInProgress';
 import Unauthorized from 'views/unauthorized';
 
@@ -17,9 +18,15 @@ const authorizedRoutes = [{
 }, {
   path: '/dashboard/workplace',
   exact: true,
-  permissions: ['admin', 'user'],
+  permissions: ['admin'],
   redirect: '/login',
   component: WorkInProgress,
+}, {
+  path: '/outlets',
+  exact: true,
+  permissions: ['admin', 'user'],
+  component: Outlets,
+  unauthorized: Unauthorized,
 }, {
   path: '/exception/403',
   exact: true,

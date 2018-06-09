@@ -1,0 +1,14 @@
+@import 'styles/helpers';
+
+.view-outlets {
+  &-outlets {
+    :nth-child(4n) {
+      margin-right: 0;
+    }
+    &-item {
+      display: inline-block;
+      width: calc(25% - 18px);
+      margin: 0 24px 24px 0;
+    }
+  }
+}

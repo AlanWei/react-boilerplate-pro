@@ -172,11 +172,5 @@ module.exports = {
     publicPath: '/',
     contentBase: SOURCE_DIR,
     historyApiFallback: true,
-    proxy: {
-      '/api': {
-        changeOrigin: true,
-        target: 'http://localhost:3000',
-      },
-    },
   },
 };
