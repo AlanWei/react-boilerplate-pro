@@ -10,13 +10,13 @@ const propTypes = {
 class LoginChecker extends Component {
   componentDidMount() {
     if (!this.props.isLogin) {
-      this.props.history.push('/');
+      this.props.history.push('/login');
     }
   }
 
   componentDidUpdate() {
     if (!this.props.isLogin) {
-      this.props.history.push('/');
+      this.props.history.push('/login');
     }
   }
 

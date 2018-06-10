@@ -28,6 +28,12 @@ const authorizedRoutes = [{
   component: Outlets,
   unauthorized: Unauthorized,
 }, {
+  path: '/outlets/:id',
+  exact: true,
+  permissions: ['admin', 'user'],
+  component: WorkInProgress,
+  unauthorized: Unauthorized,
+}, {
   path: '/exception/403',
   exact: true,
   permissions: ['god'],
@@ -38,7 +44,7 @@ const authorizedRoutes = [{
 const normalRoutes = [{
   path: '/',
   exact: true,
-  redirect: '/dashboard/analysis/realtime',
+  redirect: '/outlets',
 }, {
   path: '/login',
   exact: true,
