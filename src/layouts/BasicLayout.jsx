@@ -94,6 +94,12 @@ class BasicLayout extends Component {
     );
   }
 
+  renderPageHeader = () => {
+    return (
+      <div />
+    );
+  }
+
   renderFooter = () => (
     <div className={`${this.props.prefixCls}-footer`}>
       Copyright © 2018
@@ -126,6 +132,7 @@ class BasicLayout extends Component {
           />
           <div className={`${prefixCls}-content`}>
             {this.renderHeader()}
+            {this.renderPageHeader()}
             <div className={`${prefixCls}-mainContent`}>
               {children}
             </div>
