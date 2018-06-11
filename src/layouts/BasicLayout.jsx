@@ -8,6 +8,7 @@ import { matchRoutes } from 'react-router-config';
 import get from 'lodash/get';
 import map from 'lodash/map';
 import head from 'lodash/head';
+import isEmpty from 'lodash/isEmpty';
 import { Avatar, Dropdown, Menu, Icon, Breadcrumb } from 'antd';
 import Sider from 'react-sider';
 import 'react-sider/lib/index.css';
@@ -119,6 +120,11 @@ class BasicLayout extends Component {
 
   renderPageHeader = () => {
     const { prefixCls, route: { pageTitle }, intl } = this.props;
+
+    if (isEmpty(pageTitle)) {
+      return null;
+    }
+
     const pageTitleStr = intl.formatMessage({ id: pageTitle });
     return (
       <div className={`${prefixCls}-pageHeader`}>
