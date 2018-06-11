@@ -9,6 +9,7 @@ import './index.scss';
 
 const propTypes = {
   match: PropTypes.object.isRequired,
+  intl: PropTypes.object.isRequired,
   outlet: PropTypes.object.isRequired,
   getOutlet: PropTypes.func.isRequired,
 };
