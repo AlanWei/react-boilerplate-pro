@@ -48,4 +48,9 @@
   &-intlSwitchSeparator {
     margin: 0 12px;
   }
+  &-errorMsg {
+    text-align: center;
+    margin-top: 12px;
+    color: $red-6;
+  }
 }

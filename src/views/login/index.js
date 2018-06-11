@@ -54,9 +54,10 @@ class Login extends Component {
   }
 
   renderErrorMsg = () => {
-    const show = !isEmpty(this.props.errorMsg);
+    const { errorMsg, prefixCls } = this.props;
+    const show = !isEmpty(errorMsg);
     if (show) {
-      return <div>{this.props.errorMsg}</div>;
+      return <div className={`${prefixCls}-errorMsg`}>{errorMsg}</div>;
     }
     return null;
   };
