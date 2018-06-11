@@ -105,14 +105,20 @@ class BasicLayout extends Component {
   renderBreadcrumb = () => {
     const { route: { breadcrumb }, intl, prefixCls } = this.props;
     const breadcrumbData = generateBreadcrumb(breadcrumb);
+
     return (
       <Breadcrumb className={`${prefixCls}-breadcrumb`}>
-        {map(breadcrumbData, item => (
-          <Breadcrumb.Item key={item.href}>
-            <Link href={item.href} to={item.href}>
+        {map(breadcrumbData, (item, idx) => (
+          idx === breadcrumbData.length - 1 ?
+            <Breadcrumb.Item key={item.href}>
               {intl.formatMessage({ id: item.text })}
-            </Link>
-          </Breadcrumb.Item>
+            </Breadcrumb.Item>
+            :
+            <Breadcrumb.Item key={item.href}>
+              <Link href={item.href} to={item.href}>
+                {intl.formatMessage({ id: item.text })}
+              </Link>
+            </Breadcrumb.Item>
         ))}
       </Breadcrumb>
     );

@@ -4,13 +4,19 @@ import filter from 'lodash/filter';
 import { combineRoutes } from 'app/config/routes';
 
 const generateBreadcrumb = breadcrumb => (
-  map(breadcrumb, (path) => {
-    const { pageTitle } = head(filter(combineRoutes, route => route.path === path));
+  [{
+    text: 'pageTitle_homePage',
+    href: '/',
+  }].concat(map(breadcrumb, (path) => {
+    const { pageTitle } = head(filter(
+      combineRoutes,
+      route => route.path === path,
+    ));
     return {
       text: pageTitle,
       href: path,
     };
-  })
+  }))
 );
 
 export default generateBreadcrumb;

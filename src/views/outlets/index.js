@@ -30,7 +30,6 @@ class Outlets extends Component {
         ];
         return (
           <Card
-            hoverable
             cover={<img alt="" src={outlet.imgSrc} />}
             actions={actions}
             key={outlet.id}
