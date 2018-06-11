@@ -1,0 +1,17 @@
+@import 'styles/helpers';
+
+.view-outletDetail {
+  &-title {
+    font-size: $font-size-xl;
+    font-weight: bold;
+    color: $font-color-title;
+    margin-bottom: 16px;
+  }
+  &-info {
+    margin-bottom: 16px;
+  }
+  &-label {
+    color: $font-color-title;
+    margin-right: 4px;
+  }
+}

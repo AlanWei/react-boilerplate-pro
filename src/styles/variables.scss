@@ -54,10 +54,12 @@ $font-color-secondary: rgba(0, 0, 0, .45) !default;
 
 // shadow
 $shadow-color: rgba(0, 0, 0, .15) !default;
+$shadow-color-light: rgba(0, 0, 0, .08) !default;
 $shadow-1-up: 0 1px 4px $shadow-color !default;
 $shadow-1-down: 0 1px 4px $shadow-color !default;
 $shadow-1-left: -1px 0 4px $shadow-color !default;
 $shadow-1-right: 1px 0 4px $shadow-color !default;
+$shadow-1-down-light: 0 1px 4px $shadow-color-light !default;
 
 // background
 $layout-body-background: #f0f2f5 !default;

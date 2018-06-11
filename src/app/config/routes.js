@@ -1,5 +1,6 @@
 import Login from 'views/login';
 import Outlets from 'views/outlets';
+import OutletDetail from 'views/outletDetail';
 import WorkInProgress from 'views/workInProgress';
 import Unauthorized from 'views/unauthorized';
 
@@ -36,7 +37,7 @@ const authorizedRoutes = [{
   path: '/outlets/:id',
   exact: true,
   permissions: ['admin', 'user'],
-  component: WorkInProgress,
+  component: OutletDetail,
   unauthorized: Unauthorized,
   pageTitle: 'pageTitle_outletDetail',
   breadcrumb: ['/outlets', '/outlets/:id'],

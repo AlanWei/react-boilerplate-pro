@@ -92,8 +92,8 @@ class BasicLayout extends Component {
     return (
       <div className={`${prefixCls}-header`}>
         <Dropdown overlay={menu} placement="bottomRight">
-          <div className={`${prefixCls}-avatar`}>
-            <Avatar>
+          <div className={`${prefixCls}-avatarContainer`}>
+            <Avatar className={`${prefixCls}-avatar`}>
               {getFirstChar(user.name)}
             </Avatar>
           </div>
