@@ -3,13 +3,19 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { connect } from 'react-redux';
 import { injectIntl } from 'react-intl-context';
+import { Link } from 'react-router-dom';
+import { matchRoutes } from 'react-router-config';
+import get from 'lodash/get';
 import map from 'lodash/map';
-import { Avatar, Dropdown, Menu, Icon } from 'antd';
+import head from 'lodash/head';
+import { Avatar, Dropdown, Menu, Icon, Breadcrumb } from 'antd';
 import Sider from 'react-sider';
 import 'react-sider/lib/index.css';
 import menuData from 'app/config/menu';
+import { combineRoutes } from 'app/config/routes';
 import appAction from 'app/action';
 import getFirstChar from 'utils/getFirstChar';
+import generateBreadcrumb from 'utils/generateBreadcrumb';
 import LoginChecker from 'hoc/LoginChecker';
 import logo from 'assets/logo.svg';
 import './BasicLayout.scss';
@@ -22,6 +28,7 @@ const propTypes = {
   user: PropTypes.object.isRequired,
   logout: PropTypes.func.isRequired,
   intl: PropTypes.object.isRequired,
+  route: PropTypes.object.isRequired,
 };
 
 const defaultProps = {
@@ -94,9 +101,30 @@ class BasicLayout extends Component {
     );
   }
 
-  renderPageHeader = () => {
+  renderBreadcrumb = () => {
+    const { route: { breadcrumb }, intl, prefixCls } = this.props;
+    const breadcrumbData = generateBreadcrumb(breadcrumb);
     return (
-      <div />
+      <Breadcrumb className={`${prefixCls}-breadcrumb`}>
+        {map(breadcrumbData, item => (
+          <Breadcrumb.Item key={item.href}>
+            <Link href={item.href} to={item.href}>
+              {intl.formatMessage({ id: item.text })}
+            </Link>
+          </Breadcrumb.Item>
+        ))}
+      </Breadcrumb>
+    );
+  }
+
+  renderPageHeader = () => {
+    const { prefixCls, route: { pageTitle }, intl } = this.props;
+    const pageTitleStr = intl.formatMessage({ id: pageTitle });
+    return (
+      <div className={`${prefixCls}-pageHeader`}>
+        {this.renderBreadcrumb()}
+        <div className={`${prefixCls}-pageTitle`}>{pageTitleStr}</div>
+      </div>
     );
   }
 
@@ -144,10 +172,15 @@ class BasicLayout extends Component {
   }
 }
 
-const mapStateToProps = state => ({
-  isLogin: state.app.isLogin,
-  user: state.app.user,
-});
+const mapStateToProps = (state) => {
+  const pathname = get(state, 'router.location.pathname', '');
+  const { route } = head((matchRoutes(combineRoutes, pathname)));
+  return {
+    isLogin: state.app.isLogin,
+    user: state.app.user,
+    route,
+  };
+};
 
 const mapDispatchToProps = {
   logout: appAction.logout,

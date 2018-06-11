@@ -31,6 +31,7 @@ const authorizedRoutes = [{
   component: Outlets,
   unauthorized: Unauthorized,
   pageTitle: 'pageTitle_outlets',
+  breadcrumb: ['/outlets'],
 }, {
   path: '/outlets/:id',
   exact: true,
@@ -38,6 +39,7 @@ const authorizedRoutes = [{
   component: WorkInProgress,
   unauthorized: Unauthorized,
   pageTitle: 'pageTitle_outletDetail',
+  breadcrumb: ['/outlets', '/outlets/:id'],
 }, {
   path: '/exception/403',
   exact: true,
@@ -56,7 +58,13 @@ const normalRoutes = [{
   component: Login,
 }];
 
+const combineRoutes = [
+  ...authorizedRoutes,
+  ...normalRoutes,
+];
+
 export {
   authorizedRoutes,
   normalRoutes,
+  combineRoutes,
 };
