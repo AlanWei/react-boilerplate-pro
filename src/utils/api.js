@@ -34,15 +34,16 @@ const api = () => {
         ...options,
       };
     },
-
     get: (url, query) => (
       opt.instance.get(url, {
         params: query,
       }).then(standardResponse)
     ),
-
     post: (url, data) => (
       opt.instance.post(url, data).then(standardResponse)
+    ),
+    delete: url => (
+      opt.instance.delete(url).then(standardResponse)
     ),
   };
 };

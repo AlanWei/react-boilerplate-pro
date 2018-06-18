@@ -38,6 +38,34 @@
   &-avatar {
     background-color: $blue-4;
   }
+  &-notice {
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+  }
+  &-noticeIcon {
+    font-size: $font-size-lg;
+  }
+  &-noticeItem {
+    margin-bottom: 12px;
+    padding: 6px 12px;
+    width: 300px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &-noticeTitle {
+    margin-bottom: 8px;
+  }
+  &-noticeMessage {
+    font-size: $font-size-sm;
+    color: $font-color-secondary;
+  }
+  &-noticeEmpty {
+    width: 300px;
+    padding: 12px 0;
+    text-align: center;
+  }
   &-footer {
     display: flex;
     align-items: center;
@@ -64,8 +92,7 @@
   &-breadcrumb {
     margin-bottom: 16px;
   }
-}
-
-.react-sider-logo {
-  padding: 8px;
+  .react-sider-logo {
+    padding: 8px;
+  }
 }

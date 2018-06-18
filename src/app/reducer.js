@@ -4,6 +4,7 @@ const defaultState = () => ({
   isLogin: false,
   user: {},
   loginErrorMsg: '',
+  notices: [],
 });
 
 const loginSuccess = (state, action) => ({
@@ -29,9 +30,15 @@ const logout = state => ({
   user: {},
 });
 
+const getNoticesSuccess = (state, action) => ({
+  ...state,
+  notices: action.payload,
+});
+
 export default createReducer(defaultState, {
   APP_LOGIN_SUCCESS: loginSuccess,
   APP_LOGIN_ERROR: loginError,
   APP_RESET_LOGIN_ERROR_MSG: resetLoginErrorMsg,
   APP_LOGOUT: logout,
+  APP_GET_NOTICES_SUCCESS: getNoticesSuccess,
 });

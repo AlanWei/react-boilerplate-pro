@@ -1,5 +1,28 @@
+import Cookie from 'js-cookie';
 import api from 'utils/api';
 import createAsyncAction from 'utils/createAsyncAction';
+
+const getNotices = () => (
+  createAsyncAction('APP_GET_NOTICES', () => (
+    api.get('/notices')
+  ))
+);
+
+const deleteNotice = (id) => {
+  const action = createAsyncAction('APP_DELETE_NOTICE', () => (
+    api.delete(`/notices/${id}`)
+  ));
+
+  return dispatch => (
+    action(dispatch)
+      .then((callbackAction) => {
+        if (callbackAction.type === 'APP_DELETE_NOTICE_SUCCESS') {
+          return getNotices()(dispatch);
+        }
+        return null;
+      })
+  );
+};
 
 const login = (username, password) => (
   createAsyncAction('APP_LOGIN', () => (
@@ -20,6 +43,10 @@ const loginUser = (username, password) => {
   return dispatch => (
     action(dispatch)
       .then(((callbackAction) => {
+        if (callbackAction.type === 'APP_LOGIN_SUCCESS') {
+          Cookie.set('user', JSON.stringify(callbackAction.payload));
+          return getNotices()(dispatch);
+        }
         if (callbackAction.type === 'APP_LOGIN_ERROR') {
           return setTimeout(() => dispatch(resetLoginErrorMsg()), 1500);
         }
@@ -28,13 +55,19 @@ const loginUser = (username, password) => {
   );
 };
 
-const logout = () => ({
-  type: 'APP_LOGOUT',
-});
+const logout = () => {
+  Cookie.remove('user');
+
+  return ({
+    type: 'APP_LOGOUT',
+  });
+};
 
 export default {
   login,
   loginUser,
   resetLoginErrorMsg,
   logout,
+  getNotices,
+  deleteNotice,
 };

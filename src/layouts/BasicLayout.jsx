@@ -9,7 +9,7 @@ import get from 'lodash/get';
 import map from 'lodash/map';
 import head from 'lodash/head';
 import isEmpty from 'lodash/isEmpty';
-import { Avatar, Dropdown, Menu, Icon, Breadcrumb } from 'antd';
+import { Avatar, Dropdown, Menu, Icon, Breadcrumb, Popover } from 'antd';
 import Sider from 'react-sider';
 import 'react-sider/lib/index.css';
 import menuData from 'app/config/menu';
@@ -27,7 +27,9 @@ const propTypes = {
   location: PropTypes.object.isRequired,
   isLogin: PropTypes.bool.isRequired,
   user: PropTypes.object.isRequired,
+  notices: PropTypes.array.isRequired,
   logout: PropTypes.func.isRequired,
+  deleteNotice: PropTypes.func.isRequired,
   intl: PropTypes.object.isRequired,
   route: PropTypes.object.isRequired,
 };
@@ -63,10 +65,30 @@ class BasicLayout extends Component {
       logout,
       prefixCls,
       user,
+      notices,
+      deleteNotice,
       intl,
     } = this.props;
 
-    const menu = (
+    const noticeMenu = isEmpty(notices) ? (
+      <div className={`${prefixCls}-noticeEmpty`}>
+        {intl.formatMessage({ id: 'basicLayout_readall_notice' })}
+      </div>
+    )
+      :
+      map(notices, notice => (
+        <div
+          key={notice.id}
+          className={`${prefixCls}-noticeItem`}
+          onClick={() => deleteNotice(notice.id)}
+          role="presentation"
+        >
+          <div className={`${prefixCls}-noticeTitle`}>{notice.title}</div>
+          <div className={`${prefixCls}-noticeMessage`}>{notice.message}</div>
+        </div>
+      ));
+
+    const userMenu = (
       <Menu>
         <Menu.Item disabled className={`${prefixCls}-userMenuItem`}>
           <Icon type="user" className={`${prefixCls}-userMenuIcon`} />
@@ -91,7 +113,17 @@ class BasicLayout extends Component {
 
     return (
       <div className={`${prefixCls}-header`}>
-        <Dropdown overlay={menu} placement="bottomRight">
+        <div className={`${prefixCls}-notice`}>
+          <Popover
+            placement="bottomRight"
+            arrowPointAtCenter
+            trigger="click"
+            content={noticeMenu}
+          >
+            <Icon className={`${prefixCls}-noticeIcon`} type="bell" />
+          </Popover>
+        </div>
+        <Dropdown overlay={userMenu} placement="bottomRight">
           <div className={`${prefixCls}-avatarContainer`}>
             <Avatar className={`${prefixCls}-avatar`}>
               {getFirstChar(user.name)}
@@ -191,11 +223,13 @@ const mapStateToProps = (state) => {
     isLogin: state.app.isLogin,
     user: state.app.user,
     route,
+    notices: state.app.notices,
   };
 };
 
 const mapDispatchToProps = {
   logout: appAction.logout,
+  deleteNotice: appAction.deleteNotice,
 };
 
 BasicLayout.propTypes = propTypes;

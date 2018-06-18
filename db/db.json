@@ -1,80 +1,153 @@
 {
-  "outlets": [{
-    "id": 1,
-    "name": "Starbucks",
-    "description": "3 Abc Street 7 #01-J4, XYZ Mall",
-    "imgSrc": "https://media.cntraveler.com/photos/5af4afcff535091186d4acbc/5:4/w_480,c_limit/GettyImages-522435114.jpg",
-    "hours": "Open 24 hours",
-    "phone": "1234 5678",
-    "categories": ["Coffee", "Cafes", "Desert", "Western"]
-  }, {
-    "id": 2,
-    "name": "Starbucks",
-    "description": "3 Abc Street 7 #01-J4, XYZ Mall",
-    "imgSrc": "https://media.cntraveler.com/photos/5af4afcff535091186d4acbc/5:4/w_480,c_limit/GettyImages-522435114.jpg",
-    "hours": "Open 24 hours",
-    "phone": "1234 5678",
-    "categories": ["Coffee", "Cafes", "Desert", "Western"]
-  }, {
-    "id": 3,
-    "name": "Starbucks",
-    "description": "3 Abc Street 7 #01-J4, XYZ Mall",
-    "imgSrc": "https://media.cntraveler.com/photos/5af4afcff535091186d4acbc/5:4/w_480,c_limit/GettyImages-522435114.jpg",
-    "hours": "Open 24 hours",
-    "phone": "1234 5678",
-    "categories": ["Coffee", "Cafes", "Desert", "Western"]
-  }, {
-    "id": 4,
-    "name": "Starbucks",
-    "description": "3 Abc Street 7 #01-J4, XYZ Mall",
-    "imgSrc": "https://media.cntraveler.com/photos/5af4afcff535091186d4acbc/5:4/w_480,c_limit/GettyImages-522435114.jpg",
-    "hours": "Open 24 hours",
-    "phone": "1234 5678",
-    "categories": ["Coffee", "Cafes", "Desert", "Western"]
-  }, {
-    "id": 5,
-    "name": "Starbucks",
-    "description": "3 Abc Street 7 #01-J4, XYZ Mall",
-    "imgSrc": "https://media.cntraveler.com/photos/5af4afcff535091186d4acbc/5:4/w_480,c_limit/GettyImages-522435114.jpg",
-    "hours": "Open 24 hours",
-    "phone": "1234 5678",
-    "categories": ["Coffee", "Cafes", "Desert", "Western"]
-  }, {
-    "id": 6,
-    "name": "Starbucks",
-    "description": "3 Abc Street 7 #01-J4, XYZ Mall",
-    "imgSrc": "https://media.cntraveler.com/photos/5af4afcff535091186d4acbc/5:4/w_480,c_limit/GettyImages-522435114.jpg",
-    "hours": "Open 24 hours",
-    "phone": "1234 5678",
-    "categories": ["Coffee", "Cafes", "Desert", "Western"]
-  }, {
-    "id": 7,
-    "name": "Starbucks",
-    "description": "3 Abc Street 7 #01-J4, XYZ Mall",
-    "imgSrc": "https://media.cntraveler.com/photos/5af4afcff535091186d4acbc/5:4/w_480,c_limit/GettyImages-522435114.jpg"
-  }, {
-    "id": 8,
-    "name": "Starbucks",
-    "description": "3 Abc Street 7 #01-J4, XYZ Mall",
-    "imgSrc": "https://media.cntraveler.com/photos/5af4afcff535091186d4acbc/5:4/w_480,c_limit/GettyImages-522435114.jpg",
-    "hours": "Open 24 hours",
-    "phone": "1234 5678",
-    "categories": ["Coffee", "Cafes", "Desert", "Western"]
-  }, {
-    "id": 9,
-    "name": "Starbucks",
-    "description": "3 Abc Street 7 #01-J4, XYZ Mall",
-    "imgSrc": "https://media.cntraveler.com/photos/5af4afcff535091186d4acbc/5:4/w_480,c_limit/GettyImages-522435114.jpg",
-    "hours": "Open 24 hours",
-    "phone": "1234 5678",
-    "categories": ["Coffee", "Cafes", "Desert", "Western"]
-  }, {
-    "id": 10,
-    "name": "Starbucks",
-    "description": "3 Abc Street 7 #01-J4, XYZ Mall",
-    "imgSrc": "https://media.cntraveler.com/photos/5af4afcff535091186d4acbc/5:4/w_480,c_limit/GettyImages-522435114.jpg",
-    "hours": "Open 24 hours",
-    "phone": "1234 5678",
-    "categories": ["Coffee", "Cafes", "Desert", "Western"]
-  }]
+  "outlets": [
+    {
+      "id": 1,
+      "name": "Starbucks",
+      "description": "3 Abc Street 7 #01-J4, XYZ Mall",
+      "imgSrc": "https://media.cntraveler.com/photos/5af4afcff535091186d4acbc/5:4/w_480,c_limit/GettyImages-522435114.jpg",
+      "hours": "Open 24 hours",
+      "phone": "1234 5678",
+      "categories": [
+        "Coffee",
+        "Cafes",
+        "Desert",
+        "Western"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Starbucks",
+      "description": "3 Abc Street 7 #01-J4, XYZ Mall",
+      "imgSrc": "https://media.cntraveler.com/photos/5af4afcff535091186d4acbc/5:4/w_480,c_limit/GettyImages-522435114.jpg",
+      "hours": "Open 24 hours",
+      "phone": "1234 5678",
+      "categories": [
+        "Coffee",
+        "Cafes",
+        "Desert",
+        "Western"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Starbucks",
+      "description": "3 Abc Street 7 #01-J4, XYZ Mall",
+      "imgSrc": "https://media.cntraveler.com/photos/5af4afcff535091186d4acbc/5:4/w_480,c_limit/GettyImages-522435114.jpg",
+      "hours": "Open 24 hours",
+      "phone": "1234 5678",
+      "categories": [
+        "Coffee",
+        "Cafes",
+        "Desert",
+        "Western"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Starbucks",
+      "description": "3 Abc Street 7 #01-J4, XYZ Mall",
+      "imgSrc": "https://media.cntraveler.com/photos/5af4afcff535091186d4acbc/5:4/w_480,c_limit/GettyImages-522435114.jpg",
+      "hours": "Open 24 hours",
+      "phone": "1234 5678",
+      "categories": [
+        "Coffee",
+        "Cafes",
+        "Desert",
+        "Western"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Starbucks",
+      "description": "3 Abc Street 7 #01-J4, XYZ Mall",
+      "imgSrc": "https://media.cntraveler.com/photos/5af4afcff535091186d4acbc/5:4/w_480,c_limit/GettyImages-522435114.jpg",
+      "hours": "Open 24 hours",
+      "phone": "1234 5678",
+      "categories": [
+        "Coffee",
+        "Cafes",
+        "Desert",
+        "Western"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Starbucks",
+      "description": "3 Abc Street 7 #01-J4, XYZ Mall",
+      "imgSrc": "https://media.cntraveler.com/photos/5af4afcff535091186d4acbc/5:4/w_480,c_limit/GettyImages-522435114.jpg",
+      "hours": "Open 24 hours",
+      "phone": "1234 5678",
+      "categories": [
+        "Coffee",
+        "Cafes",
+        "Desert",
+        "Western"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Starbucks",
+      "description": "3 Abc Street 7 #01-J4, XYZ Mall",
+      "imgSrc": "https://media.cntraveler.com/photos/5af4afcff535091186d4acbc/5:4/w_480,c_limit/GettyImages-522435114.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Starbucks",
+      "description": "3 Abc Street 7 #01-J4, XYZ Mall",
+      "imgSrc": "https://media.cntraveler.com/photos/5af4afcff535091186d4acbc/5:4/w_480,c_limit/GettyImages-522435114.jpg",
+      "hours": "Open 24 hours",
+      "phone": "1234 5678",
+      "categories": [
+        "Coffee",
+        "Cafes",
+        "Desert",
+        "Western"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Starbucks",
+      "description": "3 Abc Street 7 #01-J4, XYZ Mall",
+      "imgSrc": "https://media.cntraveler.com/photos/5af4afcff535091186d4acbc/5:4/w_480,c_limit/GettyImages-522435114.jpg",
+      "hours": "Open 24 hours",
+      "phone": "1234 5678",
+      "categories": [
+        "Coffee",
+        "Cafes",
+        "Desert",
+        "Western"
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Starbucks",
+      "description": "3 Abc Street 7 #01-J4, XYZ Mall",
+      "imgSrc": "https://media.cntraveler.com/photos/5af4afcff535091186d4acbc/5:4/w_480,c_limit/GettyImages-522435114.jpg",
+      "hours": "Open 24 hours",
+      "phone": "1234 5678",
+      "categories": [
+        "Coffee",
+        "Cafes",
+        "Desert",
+        "Western"
+      ]
+    }
+  ],
+  "notices": [
+    {
+      "id": 0,
+      "title": "Task A",
+      "message": "Task needs to be done before 2020.08.20"
+    },
+    {
+      "id": 1,
+      "title": "Task B",
+      "message": "Task needs to be done before 2020.08.20"
+    },
+    {
+      "id": 2,
+      "title": "Task C",
+      "message": "Task needs to be done before 2020.08.20"
+    }
+  ]
 }
