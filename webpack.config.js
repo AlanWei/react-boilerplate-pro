@@ -17,7 +17,6 @@ const OUTPUT_DIR = path.resolve(__dirname, 'build');
 const CLIENT_DIR = path.join(OUTPUT_DIR, VERSION);
 
 const config = buildConfig[BUILD_DOMAIN];
-const { appName } = config;
 const localeMessages = require('./src/i18n/locale.json');
 
 module.exports = {
@@ -160,7 +159,7 @@ module.exports = {
       { from: 'favicon.ico' },
     ]),
     new HtmlWebpackPlugin({
-      title: appName,
+      title: 'React App Pro',
       filename: './index.html',
       template: './index.ejs',
     }),
