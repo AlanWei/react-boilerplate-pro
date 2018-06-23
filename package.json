@@ -62,7 +62,7 @@
     "path-to-regexp": "^2.2.1",
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
-    "react-acl-router": "^0.2.4",
+    "react-acl-router": "^0.2.5",
     "react-dom": "^16.4.1",
     "react-intl-context": "^0.7.0",
     "react-loadable": "^5.4.0",

@@ -18,6 +18,7 @@ import appAction from 'app/action';
 import getFirstChar from 'utils/getFirstChar';
 import generateBreadcrumb from 'utils/generateBreadcrumb';
 import LoginChecker from 'hoc/LoginChecker';
+import Notification from 'components/notification';
 import logo from 'assets/logo.svg';
 import './BasicLayout.scss';
 
@@ -30,6 +31,8 @@ const propTypes = {
   notices: PropTypes.array.isRequired,
   logout: PropTypes.func.isRequired,
   deleteNotice: PropTypes.func.isRequired,
+  notification: PropTypes.object.isRequired,
+  resetNotification: PropTypes.func.isRequired,
   intl: PropTypes.object.isRequired,
   route: PropTypes.object.isRequired,
 };
@@ -178,6 +181,16 @@ class BasicLayout extends Component {
     </div>
   )
 
+  renderNotification = () => {
+    const { notification: { title, content }, resetNotification } = this.props;
+    if (isEmpty(title) && isEmpty(content)) {
+      return null;
+    }
+    return (
+      <Notification title={title} content={content} onDismiss={resetNotification} />
+    );
+  }
+
   render() {
     const {
       prefixCls,
@@ -211,6 +224,7 @@ class BasicLayout extends Component {
             {this.renderFooter()}
           </div>
         </div>
+        {this.renderNotification()}
       </LoginChecker>
     );
   }
@@ -224,12 +238,14 @@ const mapStateToProps = (state) => {
     user: state.app.user,
     route,
     notices: state.app.notices,
+    notification: state.app.notification,
   };
 };
 
 const mapDispatchToProps = {
   logout: appAction.logout,
   deleteNotice: appAction.deleteNotice,
+  resetNotification: appAction.resetNotification,
 };
 
 BasicLayout.propTypes = propTypes;

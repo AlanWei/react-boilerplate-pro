@@ -1,0 +1,28 @@
+@import 'styles/helpers';
+
+.components-notification {
+  position: absolute;
+  top: 32px;
+  right: 64px;
+  padding: 16px 24px;
+  min-width: 360px;
+  border-radius: 3px;
+  background-color: $grey-1;
+  box-shadow: 0 2px 4px 0 $shadow-color-light;
+  font-size: 14px;
+  z-index: 999;
+
+  &-title {
+    font-weight: bold;
+    margin-bottom: 4px;
+  }
+
+  &-close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    font-size: 24px;
+    color: $grey-4;
+    cursor: pointer;
+  }
+}

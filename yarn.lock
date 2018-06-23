@@ -7001,9 +7001,9 @@ rc@^1.1.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react-acl-router@^0.2.4:
-  version "0.2.4"
-  resolved "https://registry.yarnpkg.com/react-acl-router/-/react-acl-router-0.2.4.tgz#18b17836997a4a77da6ccfb7f0c5e73805cc7e88"
+react-acl-router@^0.2.5:
+  version "0.2.5"
+  resolved "https://registry.yarnpkg.com/react-acl-router/-/react-acl-router-0.2.5.tgz#c352463fbdb60f71da4c05f33edee587f56ed574"
   dependencies:
     prop-types "^15.6.1"
 

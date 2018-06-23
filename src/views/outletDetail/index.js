@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { injectIntl } from 'react-intl-context';
-import { Card, Tag } from 'antd';
+import { Card, Tag, Button } from 'antd';
 import map from 'lodash/map';
+import appAction from 'app/action';
 import action from './action';
 import './index.scss';
 
@@ -12,6 +13,7 @@ const propTypes = {
   intl: PropTypes.object.isRequired,
   outlet: PropTypes.object.isRequired,
   getOutlet: PropTypes.func.isRequired,
+  updateNotification: PropTypes.func.isRequired,
 };
 
 class OutletDetail extends Component {
@@ -20,7 +22,7 @@ class OutletDetail extends Component {
   }
 
   render() {
-    const { outlet, intl } = this.props;
+    const { outlet, updateNotification, intl } = this.props;
 
     return (
       <div className="view-outletDetail">
@@ -42,6 +44,16 @@ class OutletDetail extends Component {
             ))}
           </div>
         </Card>
+        <Button
+          className="view-outletDetail-notificationBtn"
+          type="primary"
+          onClick={() => updateNotification({
+            title: 'Notification Title',
+            content: 'Notification will dismiss after 4.5s.',
+          })}
+        >
+          {intl.formatMessage({ id: 'outletDetail_showNotification' })}
+        </Button>
       </div>
     );
   }
@@ -53,6 +65,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = ({
   getOutlet: action.getOutlet,
+  updateNotification: appAction.updateNotification,
 });
 
 OutletDetail.propTypes = propTypes;

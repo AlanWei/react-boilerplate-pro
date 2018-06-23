@@ -27,7 +27,8 @@
     "outletDetail_description": "Location: ",
     "outletDetail_hours": "Opening Hours: ",
     "outletDetail_phone": "Phone: ",
-    "outletDetail_categories": "Categories: "
+    "outletDetail_categories": "Categories: ",
+    "outletDetail_showNotification": "Show Notification"
   },
   "zh-cn": {
     "appName": "React 中后台应用",
@@ -57,6 +58,7 @@
     "outletDetail_description": "位置: ",
     "outletDetail_hours": "营业时间: ",
     "outletDetail_phone": "联系电话: ",
-    "outletDetail_categories": "类型: "
+    "outletDetail_categories": "类型: ",
+    "outletDetail_showNotification": "显示通知"
   }
 }
