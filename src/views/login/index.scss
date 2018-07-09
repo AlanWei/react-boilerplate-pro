@@ -12,12 +12,13 @@
   }
   &-appInfo {
     display: flex;
+    justify-content: center;
+    align-items: center;
     height: 48px;
   }
   &-appLogo {
-    height: 100%;
-    padding: 4px;
-    margin-right: 8px;
+    height: 40px;
+    margin-right: 16px;
   }
   &-appName {
     font-size: 32px;
