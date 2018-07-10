@@ -18,7 +18,8 @@ const propTypes = {
 
 class OutletDetail extends Component {
   componentDidMount() {
-    this.props.getOutlet(this.props.match.params.id);
+    const { getOutlet, match } = this.props;
+    getOutlet(match.params.id);
   }
 
   render() {
@@ -27,20 +28,35 @@ class OutletDetail extends Component {
     return (
       <div className="view-outletDetail">
         <Card>
-          <div className="view-outletDetail-title">{outlet.name}</div>
-          <div className="view-outletDetail-info">
-            <span className="view-outletDetail-label">{intl.formatMessage({ id: 'outletDetail_description' })}</span>{outlet.description}
+          <div className="view-outletDetail-title">
+            {outlet.name}
           </div>
           <div className="view-outletDetail-info">
-            <span className="view-outletDetail-label">{intl.formatMessage({ id: 'outletDetail_hours' })}</span>{outlet.hours}
+            <span className="view-outletDetail-label">
+              {intl.formatMessage({ id: 'outletDetail_description' })}
+            </span>
+            {outlet.description}
           </div>
           <div className="view-outletDetail-info">
-            <span className="view-outletDetail-label">{intl.formatMessage({ id: 'outletDetail_phone' })}</span>{outlet.phone}
+            <span className="view-outletDetail-label">
+              {intl.formatMessage({ id: 'outletDetail_hours' })}
+            </span>
+            {outlet.hours}
           </div>
           <div className="view-outletDetail-info">
-            <span className="view-outletDetail-label">{intl.formatMessage({ id: 'outletDetail_categories' })}</span>
+            <span className="view-outletDetail-label">
+              {intl.formatMessage({ id: 'outletDetail_phone' })}
+            </span>
+            {outlet.phone}
+          </div>
+          <div className="view-outletDetail-info">
+            <span className="view-outletDetail-label">
+              {intl.formatMessage({ id: 'outletDetail_categories' })}
+            </span>
             {map(outlet.categories, (item, idx) => (
-              <Tag key={idx}>{item}</Tag>
+              <Tag key={idx}>
+                {item}
+              </Tag>
             ))}
           </div>
         </Card>

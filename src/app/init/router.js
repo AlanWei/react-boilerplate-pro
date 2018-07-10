@@ -17,14 +17,14 @@ const propTypes = {
   user: PropTypes.object.isRequired,
 };
 
-const Router = props => (
-  <ConnectedRouter history={props.history}>
+const Router = ({ history, user }) => (
+  <ConnectedRouter history={history}>
     <MultiIntlProvider
       defaultLocale={locale}
       messageMap={messages}
     >
       <AclRouter
-        authorities={props.user.authorities}
+        authorities={user.authorities}
         authorizedRoutes={authorizedRoutes}
         authorizedLayout={BasicLayout}
         normalRoutes={normalRoutes}

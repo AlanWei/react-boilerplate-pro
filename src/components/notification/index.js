@@ -21,7 +21,8 @@ const defaultProps = {
 
 class Notification extends Component {
   componentDidMount() {
-    this.timeout = setTimeout(this.props.onDismiss, this.props.timeout);
+    const { onDismiss, timeout } = this.props;
+    this.timeout = setTimeout(onDismiss, timeout);
   }
 
   componentWillUnmount() {
@@ -39,8 +40,12 @@ class Notification extends Component {
     return (
       <div className={prefixCls}>
         <Icon className={`${prefixCls}-close`} type="close" onClick={onDismiss} />
-        <div className={`${prefixCls}-title`}>{title}</div>
-        <div>{content}</div>
+        <div className={`${prefixCls}-title`}>
+          {title}
+        </div>
+        <div>
+          {content}
+        </div>
       </div>
     );
   }

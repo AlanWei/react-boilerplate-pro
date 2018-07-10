@@ -18,15 +18,25 @@ class WorkInProgress extends Component {
     return (
       <div className={prefixCls}>
         <div className={`${prefixCls}-colLayout`}>
-          <Card className={`${prefixCls}-colLayout-item`}>Work In Progress</Card>
-          <Card className={`${prefixCls}-colLayout-item`}>Work In Progress</Card>
+          <Card className={`${prefixCls}-colLayout-item`}>
+            Work In Progress
+          </Card>
+          <Card className={`${prefixCls}-colLayout-item`}>
+            Work In Progress
+          </Card>
         </div>
         <div className={`${prefixCls}-colLayout`}>
-          <Card className={`${prefixCls}-colLayout-item`}>Work In Progress</Card>
-          <Card className={`${prefixCls}-colLayout-item`}>Work In Progress</Card>
+          <Card className={`${prefixCls}-colLayout-item`}>
+            Work In Progress
+          </Card>
+          <Card className={`${prefixCls}-colLayout-item`}>
+            Work In Progress
+          </Card>
         </div>
         <div className={`${prefixCls}-rowLayout`}>
-          <Card className={`${prefixCls}-rowLayout-item`}>Work In Progress</Card>
+          <Card className={`${prefixCls}-rowLayout-item`}>
+            Work In Progress
+          </Card>
         </div>
       </div>
     );

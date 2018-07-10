@@ -16,31 +16,35 @@ const propTypes = {
 
 class Outlets extends Component {
   componentDidMount() {
-    this.props.getOutlets();
+    const { getOutlets } = this.props;
+    getOutlets();
   }
 
-  renderOutlets = () => (
-    <div className="view-outlets-outlets">
-      {map(this.props.outlets, (outlet) => {
-        const link = `/outlets/${outlet.id}`;
-        return (
-          <Link
-            href={link}
-            to={link}
-            key={outlet.id}
-            className="view-outlets-outlets-item"
-          >
-            <Card cover={<img alt="" src={outlet.imgSrc} />}>
-              <Meta
-                title={outlet.name}
-                description={outlet.description}
-              />
-            </Card>
-          </Link>
-        );
-      })}
-    </div>
-  )
+  renderOutlets = () => {
+    const { outlets } = this.props;
+    return (
+      <div className="view-outlets-outlets">
+        {map(outlets, (outlet) => {
+          const link = `/outlets/${outlet.id}`;
+          return (
+            <Link
+              href={link}
+              to={link}
+              key={outlet.id}
+              className="view-outlets-outlets-item"
+            >
+              <Card cover={<img alt="" src={outlet.imgSrc} />}>
+                <Meta
+                  title={outlet.name}
+                  description={outlet.description}
+                />
+              </Card>
+            </Link>
+          );
+        })}
+      </div>
+    );
+  }
 
   render() {
     return (

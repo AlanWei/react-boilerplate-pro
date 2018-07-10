@@ -11,15 +11,19 @@ const propTypes = {
 
 class Unauthorized extends Component {
   render() {
+    const { intl } = this.props;
+
     return (
       <div className="view-unauthorized">
-        <div className="view-unauthorized-errorCode">403</div>
+        <div className="view-unauthorized-errorCode">
+          403
+        </div>
         <div className="view-unauthorized-errorDesc">
-          {this.props.intl.formatMessage({ id: 'unauthorized_403' })}
+          {intl.formatMessage({ id: 'unauthorized_403' })}
         </div>
         <Link to="/" href="/">
           <Button type="primary">
-            {this.props.intl.formatMessage({ id: 'exception_backToHome' })}
+            {intl.formatMessage({ id: 'exception_backToHome' })}
           </Button>
         </Link>
       </div>

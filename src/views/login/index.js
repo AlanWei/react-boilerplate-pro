@@ -29,14 +29,16 @@ class Login extends Component {
   };
 
   componentDidMount() {
-    if (this.props.isLogin) {
-      this.props.history.push('/');
+    const { isLogin, history } = this.props;
+    if (isLogin) {
+      history.push('/');
     }
   }
 
   componentDidUpdate() {
-    if (this.props.isLogin) {
-      this.props.history.push('/');
+    const { isLogin, history } = this.props;
+    if (isLogin) {
+      history.push('/');
     }
   }
 
@@ -45,19 +47,25 @@ class Login extends Component {
   }
 
   handleLogin = () => {
+    const { loginUser } = this.props;
     const { username, password } = this.state;
-    this.props.loginUser(username, password);
+    loginUser(username, password);
   }
 
   updateLocale = (locale) => {
-    this.props.intl.updateLocale(locale);
+    const { intl } = this.props;
+    intl.updateLocale(locale);
   }
 
   renderErrorMsg = () => {
     const { errorMsg, prefixCls } = this.props;
     const show = !isEmpty(errorMsg);
     if (show) {
-      return <div className={`${prefixCls}-errorMsg`}>{errorMsg}</div>;
+      return (
+        <div className={`${prefixCls}-errorMsg`}>
+          {errorMsg}
+        </div>
+      );
     }
     return null;
   };
@@ -69,7 +77,9 @@ class Login extends Component {
       <div className={`${prefixCls}-loginPanel`}>
         <div className={`${prefixCls}-appInfo`}>
           <img className={`${prefixCls}-appLogo`} src={logo} alt="logo" />
-          <span className={`${prefixCls}-appName`}>{intl.formatMessage({ id: 'appName' })}</span>
+          <span className={`${prefixCls}-appName`}>
+            {intl.formatMessage({ id: 'appName' })}
+          </span>
         </div>
         <div className={`${prefixCls}-appDesc`}>
           {intl.formatMessage({ id: 'login_appDesc' })}
@@ -100,7 +110,9 @@ class Login extends Component {
         >
           {intl.formatMessage({ id: 'login_login_btn' })}
         </Button>
-        <div>{this.renderErrorMsg()}</div>
+        <div>
+          {this.renderErrorMsg()}
+        </div>
       </div>
     );
   }
@@ -120,7 +132,9 @@ class Login extends Component {
         >
           English
         </span>
-        <span className={`${prefixCls}-intlSwitchSeparator`}>|</span>
+        <span className={`${prefixCls}-intlSwitchSeparator`}>
+          |
+        </span>
         <span
           className={classnames({
             [`${prefixCls}-intlItem`]: true,

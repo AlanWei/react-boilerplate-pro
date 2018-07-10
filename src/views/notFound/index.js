@@ -11,15 +11,19 @@ const propTypes = {
 
 class NotFound extends Component {
   render() {
+    const { intl } = this.props;
+
     return (
       <div className="view-notFound">
-        <div className="view-notFound-errorCode">404</div>
+        <div className="view-notFound-errorCode">
+          404
+        </div>
         <div className="view-notFound-errorDesc">
-          {this.props.intl.formatMessage({ id: 'notFound_404' })}
+          {intl.formatMessage({ id: 'notFound_404' })}
         </div>
         <Link to="/" href="/">
           <Button type="primary">
-            {this.props.intl.formatMessage({ id: 'exception_backToHome' })}
+            {intl.formatMessage({ id: 'exception_backToHome' })}
           </Button>
         </Link>
       </div>
