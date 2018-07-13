@@ -64,8 +64,8 @@ class OutletDetail extends Component {
           className="view-outletDetail-notificationBtn"
           type="primary"
           onClick={() => updateNotification({
-            title: 'Notification Title',
-            content: 'Notification will dismiss after 4.5s.',
+            title: intl.formatMessage({ id: 'outletDetail_notificationTitle' }),
+            content: intl.formatMessage({ id: 'outletDetail_notificationContent' }, { seconds: '4.5' }),
           })}
         >
           {intl.formatMessage({ id: 'outletDetail_showNotification' })}

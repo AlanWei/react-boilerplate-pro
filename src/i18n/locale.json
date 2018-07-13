@@ -28,7 +28,9 @@
     "outletDetail_hours": "Opening Hours: ",
     "outletDetail_phone": "Phone: ",
     "outletDetail_categories": "Categories: ",
-    "outletDetail_showNotification": "Show Notification"
+    "outletDetail_showNotification": "Show Notification",
+    "outletDetail_notificationTitle": "Notification Title",
+    "outletDetail_notificationContent": "Notification will dismiss after {seconds}s."
   },
   "zh-cn": {
     "appName": "React 中后台应用",
@@ -59,6 +61,8 @@
     "outletDetail_hours": "营业时间: ",
     "outletDetail_phone": "联系电话: ",
     "outletDetail_categories": "类型: ",
-    "outletDetail_showNotification": "显示通知"
+    "outletDetail_showNotification": "显示通知",
+    "outletDetail_notificationTitle": "通知标题",
+    "outletDetail_notificationContent": "通知会在 {seconds} 秒后消失."
   }
 }
