@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ConnectedRouter } from 'react-router-redux';
+import { ConnectedRouter } from 'connected-react-router';
 import { MultiIntlProvider } from 'react-intl-context';
 import { connect } from 'react-redux';
 import AclRouter from 'react-acl-router';
