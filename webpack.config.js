@@ -9,6 +9,7 @@ const buildConfig = require('./buildConfig');
 
 const ENV = process.env.NODE_ENV || 'development';
 const BUILD_DOMAIN = process.env.BUILD_DOMAIN || 'localhost';
+const ASSET_PATH = process.env.ASSET_PATH || '/';
 const VERSION = `v${pkg.version}`;
 const IS_PROD = ENV === 'production';
 
@@ -28,6 +29,7 @@ module.exports = {
   },
   output: {
     path: CLIENT_DIR,
+    publicPath: ASSET_PATH,
     filename: 'assets/[name].[hash:8].js',
     libraryTarget: 'umd',
   },
@@ -148,6 +150,7 @@ module.exports = {
   plugins: [
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(ENV),
+      'process.env.ASSET_PATH': JSON.stringify(ASSET_PATH),
       'process.env.BUILD_CONFIG': JSON.stringify(config),
       'process.env.BUILD_LOCALE_MESSAGES': JSON.stringify(localeMessages),
     }),
