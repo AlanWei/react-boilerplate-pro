@@ -64,7 +64,7 @@
     "react": "^16.6.0",
     "react-acl-router": "^0.2.5",
     "react-dom": "^16.6.0",
-    "react-intl-context": "^1.0.1",
+    "react-intl-context": "^1.0.3",
     "react-redux": "^5.1.0",
     "react-router-config": "^4.4.0-beta.5",
     "react-router-dom": "^4.3.1",

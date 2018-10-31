@@ -7718,12 +7718,14 @@ react-dom@^16.6.0:
     prop-types "^15.6.2"
     scheduler "^0.10.0"
 
-react-intl-context@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/react-intl-context/-/react-intl-context-1.0.1.tgz#c5046b52bcf51fc81f7d472e20a9f87577d0ee55"
-  integrity sha512-QMccnBPzT8P2ZXEx+lM1TRh9Fgdblu8ey4cD4Mid20gPgsNJrnTw9oaiOMh+jC1OEkZ/+RZjqOVPsW/UIVxgeA==
+react-intl-context@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/react-intl-context/-/react-intl-context-1.0.3.tgz#7480113cbf5507f3c90ced1aa2ed546b65ece44c"
+  integrity sha512-NCP39jNnGcshj51QK5exVK05B2Yz1ybQJYwYGRW9nEa0x16k09mzDdlSpi+uJu+WlOLiG2iaK5p2UMVDp6v1ug==
   dependencies:
-    prop-types "^15.6.1"
+    prop-types "^15.6.2"
+    react "^16.6.0"
+    react-dom "^16.6.0"
 
 react-is@^16.3.2, react-is@^16.6.0:
   version "16.6.0"
