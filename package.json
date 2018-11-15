@@ -53,7 +53,7 @@
     "webpack-dev-server": "^3.1.10"
   },
   "dependencies": {
-    "antd": "^3.6.3",
+    "antd": "^3.10.7",
     "axios": "^0.18.0",
     "classnames": "^2.2.6",
     "connected-react-router": "^4.5.0",
@@ -68,7 +68,7 @@
     "react-redux": "^5.1.0",
     "react-router-config": "^4.4.0-beta.5",
     "react-router-dom": "^4.3.1",
-    "react-sider": "^0.3.4",
+    "react-sider": "^0.4.1",
     "redux": "^4.0.1",
     "redux-thunk": "^2.3.0"
   },
