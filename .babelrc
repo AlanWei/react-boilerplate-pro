@@ -1,19 +1,30 @@
 {
   "sourceMaps": true,
   "presets": [
-    "env",
-    "react"
+    [
+      "@babel/env",
+      {
+        "useBuiltIns": "entry"
+      }
+    ],
+    "@babel/react"
   ],
   "plugins": [
     "syntax-dynamic-import",
     "transform-class-properties",
     "transform-object-rest-spread",
-    ["module-resolver", {
-      "root": ["./src"]
-    }],
-    ["import", {
-      "libraryName": "antd",
-      "libraryDirectory": "es"
-    }]
+    [
+      "module-resolver",
+      {
+        "root": ["./src"]
+      }
+    ],
+    [
+      "import",
+      {
+        "libraryName": "antd",
+        "libraryDirectory": "es"
+      }
+    ]
   ]
 }
